@@ -120,3 +120,27 @@ bookmarkForm.addEventListener('submit', storeBookmark);
 
 // On load fetch bookmarks
 fetchBookmarks();
+
+
+
+
+//                     Dark Mode       
+
+const toggleSwitch = document.querySelector('input[type = "checkbox"]');
+const toggleIcon =  document.getElementById('toggle-icon');
+//Switch Theme
+function switchTheme(event){
+   if(event.target.checked){
+       document.documentElement.setAttribute('data-theme' , 'dark');
+       toggleIcon.children[0].classList.replace('fa-sun' , 'fa-moon');
+   }else{
+    document.documentElement.setAttribute('data-theme' , 'light');
+    toggleIcon.children[0].classList.replace('fa-moon','fa-sun');
+   }
+  
+}
+//Event listener
+toggleSwitch.addEventListener('change' , switchTheme);
+
+
+
