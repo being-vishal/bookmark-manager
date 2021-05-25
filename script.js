@@ -132,15 +132,27 @@ const toggleIcon =  document.getElementById('toggle-icon');
 function switchTheme(event){
    if(event.target.checked){
        document.documentElement.setAttribute('data-theme' , 'dark');
+       localStorage.setItem('theme' , 'dark');
        toggleIcon.children[0].classList.replace('fa-sun' , 'fa-moon');
    }else{
     document.documentElement.setAttribute('data-theme' , 'light');
+    localStorage.setItem('theme' , 'light');
     toggleIcon.children[0].classList.replace('fa-moon','fa-sun');
    }
   
 }
 //Event listener
 toggleSwitch.addEventListener('change' , switchTheme);
+
+//Check Local Storage for theme
+const currentTheme = localStorage.getItem('theme');
+if(currentTheme){
+    document.documentElement.setAttribute('data-theme' , currentTheme);
+    if(currentTheme === 'dark'){
+        toggleSwitch.checked = true;
+        toggleIcon.children[0].classList.replace('fa-sun' , 'fa-moon');
+    }
+}
 
 
 
