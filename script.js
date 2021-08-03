@@ -1,3 +1,4 @@
+//jshint esversion:8
 const modal = document.getElementById('modal');
 const modalShow = document.getElementById('show-modal');
 const modalClose = document.getElementById('close-modal');
@@ -34,7 +35,7 @@ function fetchBookmarks() {
         bookmarks = [
             {
                 name: 'Vishal Shinde',
-                url: 'https://being-vishal.github.io/vishals-website/',
+                url: 'https://vishal-codes.github.io/vishal-shinde/',
             },
         ];
         localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
