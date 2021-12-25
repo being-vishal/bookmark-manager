@@ -20,12 +20,10 @@ function closeModal() {
     modal.classList.remove('show-modal');
 }
 
-
 // Modal Event Listeners
 modalShow.addEventListener('click', showModal);
 modalClose.addEventListener('click', closeModal);
 window.addEventListener('click', (e) => (e.target === modal ? modal.classList.remove('show-modal') : false));
-
 
 //Fetch Bookmarks
 function fetchBookmarks() {
@@ -42,8 +40,6 @@ function fetchBookmarks() {
     }
     buildBookmarks();
 }
-
-
 // Handle Data entered in form
 function storeBookmark(e) {
     e.preventDefault();
@@ -61,11 +57,8 @@ function storeBookmark(e) {
     localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     fetchBookmarks();
     bookmarkForm.reset();
-    websiteNameEl.focus();
     closeModal();
 }
-
-
 //Delete Bookmarks(
 function deleteBookmark(url){
     bookmarks.forEach((bookmark, i) => {
@@ -77,8 +70,6 @@ function deleteBookmark(url){
     localStorage.setItem('bookmarks' , JSON.stringify(bookmarks) );
     fetchBookmarks();
 }
-
-
 // Build Bookmarks DOM
 function buildBookmarks(){
     //Remove all Bookmarks 
@@ -113,20 +104,10 @@ function buildBookmarks(){
         bookmarksContainer.appendChild(item);
     });
 }
-
-
 // Submit Event Listener
 bookmarkForm.addEventListener('submit', storeBookmark);
 
-
-// On load fetch bookmarks
-fetchBookmarks();
-
-
-
-
-//                     Dark Mode       
-
+//Dark Mode       
 const toggleSwitch = document.querySelector('input[type = "checkbox"]');
 const toggleIcon =  document.getElementById('toggle-icon');
 //Switch Theme
@@ -144,7 +125,6 @@ function switchTheme(event){
 }
 //Event listener
 toggleSwitch.addEventListener('change' , switchTheme);
-
 //Check Local Storage for theme
 const currentTheme = localStorage.getItem('theme');
 if(currentTheme){
@@ -156,4 +136,5 @@ if(currentTheme){
 }
 
 
-
+// On load fetch bookmarks
+fetchBookmarks();
