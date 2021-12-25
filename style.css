@@ -43,6 +43,47 @@ h1:hover {
   background: var(--hover-box-color);
 }
 
+.logo{
+  font-size: 47px;
+  position: absolute;
+  left:2%;
+  top: 1.5%;
+  margin-top: 0;
+  cursor: pointer;
+}
+
+.search-button{
+  position: absolute;
+  left:8%;
+  top: 3%;
+  background-color: var(--box-color);
+  color: var(--text-color);
+  text-decoration: none !important;
+  border-radius: 13px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  overflow:hidden;
+  width: auto;
+  max-width: 50px;
+  -webkit-transition: max-width 0.5s;
+  transition: max-width 0.5s;
+}
+
+.search-button:hover {
+  max-width: 300px;
+}
+
+.fa-search{
+  font-size: 43px;
+  padding-left: 5px;
+}
+
+.search-text{
+  white-space: nowrap;
+  padding-right: 15px;
+}
+
 /* Bookmarks */
 .container {
   display: flex;
@@ -189,6 +230,11 @@ button:hover {
 }
 
 /* Media Query */
+@media screen and (max-width: 800px) {
+  .search-button{
+    display: none;
+  }
+}
 @media screen and (max-width: 600px) {
   .item {
     margin: 10px;
