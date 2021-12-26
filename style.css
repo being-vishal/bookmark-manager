@@ -44,10 +44,10 @@ h1:hover {
 }
 
 .logo{
-  font-size: 47px;
+  width: 55px;
   position: absolute;
   left:2%;
-  top: 1.5%;
+  top: 2.3%;
   margin-top: 0;
   cursor: pointer;
 }
