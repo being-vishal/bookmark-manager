@@ -33,7 +33,7 @@ function fetchBookmarks() {
         bookmarks = [
             {
                 name: 'Vishal Shinde',
-                url: 'https://vishal-codes.github.io/vishal-shinde/',
+                url: 'https://vishal-codes.github.io',
             },
         ];
         localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
