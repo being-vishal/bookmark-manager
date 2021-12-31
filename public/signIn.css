@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-color: #141414;
+  background-size: cover;
+  color: white;
+  margin: 0;
+}
+
+
+/* NAVBAR */
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.header {
+  padding: 0;
+}
+.header .logo,
+.header .nav {
+  padding: 0 18px;
+}
+.header .logo a {
+  font-size: 38px;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.header .nav ul li {
+  display: inline-block;
+  margin-left: 90px;
+  list-style: none;
+}
+.header .nav ul li a {
+  display: block;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+  padding: 8px 0;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+.header .nav ul li a.active,
+.header .nav ul li a:hover {
+  background-color: #141414; 
+  color: #7bfff6; 
+}
+.nav-toggler {
+  height: 34px;
+  width: 44px;
+  background-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  display: none;
+  margin-right: 15px;
+}
+.nav-toggler span {
+  height: 2px;
+  width: 32px;
+  background-color: transparent;
+  display: block;
+  margin: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.nav-toggler.active span {
+  background-color: transparent;
+}
+.nav-toggler span::before,
+.nav-toggler span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+.nav-toggler span::before {
+  transform: translateY(-6px);
+}
+.nav-toggler.active span::before {
+  transform: rotate(-135deg);
+}
+.nav-toggler span::after {
+  transform: translateY(9px);
+}
+.nav-toggler.active span::after {
+  transform: rotate(135deg);
+}
+@media (max-width: 991px) {
+  .header {
+    padding: 8px 0;
+    line-height: 1.5;
+  }
+  .nav-toggler {
+    display: block;
+  }
+  .header .nav {
+    width: 100%;
+    padding: 0;
+    max-height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all 0.5s ease;
+  }
+  .header .nav.open {
+    visibility: visible;
+  }
+  .header .nav ul {
+    padding: 12px 0;
+  }
+  .header .nav ul li {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 30px auto;
+  }
+}
+
+
+.home{
+  display: flex;
+  flex-direction: column;
+  height: 88vh;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+h1{
+  font-size: 70px;
+  margin-bottom: 10px;
+}
+.home p {
+  font-size: 20px;
+  color: #7bfff6;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #7bfff6; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+   /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .17em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(28, end),
+    blink-caret .5s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 20em }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #7bfff6 }
+}
+
+
+/* FEATURES */
+.about-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 50em; */
+  margin: 40px 140px;
+}
+.cloud-svg, .gsignin-svg{
+  width: 40%;
+}
+.about-content{
+  margin-left: 35px;
+}
+.about p{
+  font-size: 22px;
+}
+.about h2{
+  color: #7bfff6;
+  font-size: 37px;
+}
+.show-mobile{
+  display: none;
+}
+.show{
+  width: 25%;
+  margin-right: 50px;
+}
+.safe-secure{
+  margin-right: 50px;
+}
+
+
+/* TRY */
+.sign-in{
+  margin: 100px 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+}
+.local-bm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+.local-bm a{
+  text-decoration: none !important;
+}
+.local-bm a button{
+  cursor: pointer;
+  width: 240px;
+  height: 50px;
+  background: #F32C52;
+  display: flex;
+  user-select: none;
+  color: #fff;
+  border: 0 none;
+  border-radius: 2px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.3;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 5px 10px #313131;
+}
+.local-bm button:hover{
+  box-shadow: 0 3px 8px 0 #f72d2dd0;
+}
+.local-bm button:active {
+  transform: translateY(1px);
+  background: #f31c43;
+  box-shadow: 0 1px 3px 0 #fd6060;
+}
+.cloud-bm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+.google-btn {
+  margin-top: 60px;
+  cursor: pointer;
+  width: 240px;
+  height: 50px;
+  background-color:#4285f4;
+  border-radius: 2px;
+  box-shadow: 0 3px 4px 0 #00000040;
+}
+.google-icon-wrapper {
+  position: absolute;
+  margin-top: 0;
+  margin-left: 1px;
+  width: 50px;
+  height: 49px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+.google-icon {
+  position: absolute;
+  margin-top: 12px;
+  margin-left: 11px;
+  width: 25px;
+  height: 26px;
+}
+.btn-text {
+  text-align:center;
+  margin-top:0;
+  padding: 13px 0 0 49px;
+  color: #fff;
+  font-size: 17px;
+  letter-spacing: 0.2px;
+}
+.google-btn:hover {
+  box-shadow: 0 0 6px #4285f4;
+}
+.google-btn:active {
+  background: #1669F2;
+}
+
+
+/* FOOTER */
+.footer{
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: space-around;
+}
+.left-footer{
+  padding-right: 60px;
+  max-width: 33.3%;
+}
+.middle-footer{
+  max-width: 33.3%;
+}
+.right-footer{
+  padding-left: 60px;
+  max-width: 33.3%;
+}
+.footerBtn{
+  width:110px;
+  font-size: 16px;
+  height: 35px;
+  margin-right: 20px;
+  border-radius: 7px;
+  font-weight: 500;
+  background-color:#7bfff6; 
+  cursor: pointer;
+}
+.footerBtn:hover{
+  background-color: white;
+}
+.happy-day{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+@media screen and (max-width: 990px) {
+  .about-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .about{
+    flex-direction: column;
+    width: auto;
+    margin: 30px;
+  }
+  .cloud-svg{
+    width: 70%;
+  }
+  .gsignin-svg{
+    width: 100%;
+  }
+  .about-content{
+    margin: 0;
+  } 
+  .show-mobile{
+    display: block;
+    width: 60%;
+  }
+  .show{
+    display: none;
+  }
+  .sign-in{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    margin: 10px;
+  }
+  .local-bm{
+    width: 90%;
+    margin-bottom: 60px;
+  }
+  .cloud-bm{
+    margin-top: 30px;
+    margin-bottom: 60px;
+    width: 90%;
+  }
+  .google-btn{
+    margin-top: 0;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  h1{
+    font-size: 50px;
+  }
+  h2{
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+  .home p{
+    font-size: 16px;
+    color: #7bfff6;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #7bfff6; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .17em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  .about p{
+    margin-top: 0;
+    font-size: 17px;
+  }
+  .footer{
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .left-footer{
+    padding-right: 0;
+    max-width: 100%;
+  }
+  .middle-footer{
+    max-width: 100%;
+  }
+  .right-footer{
+    padding-left: 0;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookmark Manager</title>
+  <link rel="icon" type="image/png" href="favicon.ico">
+  <link rel="stylesheet" href="signIn.css" />
+</head>
+
+<body>
+  <!-- NAVBAR  -->
+  <header class="header">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="logo">
+          <a href="#">🔖</a>
+        </div>
+        <button type="button" class="nav-toggler">
+          <span></span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="#about">features</a></li>
+            <li><a class="active" href="#try">start using !</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="home">
+    <h1>Bookmark Manager</h1>
+    <p>Simple, Safe & Easily Accessible!</p>
+  </div>
+
+  <hr style="border: 1px solid rgb(92, 92, 92);">
+
+  <div id="about" class="about-wrapper">
+    <div class="about">
+      <img class="cloud-svg" src="./assets/bk9.svg">
+      <div class="about-content">
+        <h2>Available everywhere!</h2>
+        <p>At home or on the go? No problem, With a mobile-friendly web app! and power of cloud☁️ storage You can access
+          and manage your bookmarks from anywhere on desktop💻 or mobile📱.</p>
+      </div>
+    </div>
+    <div class="about">
+      <img src="./assets/user-privacy.svg" class="show-mobile">
+      <div class="about-content safe-secure">
+        <h2>Privacy enabled!</h2>
+        <p> Even though the data is stored in cloud, by any manner this data is not sent to any 💵❌adsense/ company or
+          any third party app and neither any of the content from the databse is used for analytics/ data science/
+          machine learning❌🤖 or anything. No ads & trackers❌🕵🏼.</p>
+      </div>
+      <img src="./assets/user-privacy.svg" class="show">
+    </div>
+    <div class="about">
+      <img class="gsignin-svg" src="./assets/gsignin.svg">
+      <div class="about-content">
+        <h2>Google Sign-In!</h2>
+        <p>Only users who sign in✅ with their Google accounts can access the web application. You are the only one🔐 who
+          can access and manage your data & No need of creating one more password.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr id="try" style="border: 1px solid rgb(92, 92, 92);">
+
+  <div  class="sign-in">
+    <div class="cloud-bm">
+      <h2 style="color: white; text-align: center;font-weight: 400;">
+        If you want to access your bookmarks from any device or brwoser then just Sign in with your google account and voila! you will be redirected to the web app!
+      </h2>
+      <div id="signInWithGoogleBtn" class="google-btn">
+        <div class="google-icon-wrapper">
+          <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
+        </div>
+        <p class="btn-text"><b>Sign in with Google</b></p>
+      </div>
+    </div>
+    <div class="local-bm">
+      <h2 style="color: rgb(255, 0, 0); text-align: center ;font-weight: 400;">
+        If you don't want to store your bookmarks on cloud then you can use the local version. THIS ALSO MEANS THAT YOUR BOOKMARKS WON'T BE AVAILABLE ON EVERY DEVICE AS THEY WONT BE SYNCED UP.
+      </h2>
+       <a target="_blank" rel="noopener" href="https://vishal-codes.github.io/bookmark-manager/"><button >USE Local Version</button></a> 
+    </div>
+  </div>
+
+  <hr style="border: 1px solid rgb(92, 92, 92);">
+
+  <div class="footer">
+    <div class="left-footer">
+      <h2>About Developer</h2>
+      <p>
+        Hey beloved user I am <a style="color:#7bfff6" href="https://vishal-codes.github.io/">Vishal</a> ,creator of this web app. 
+        I am an aspiring Computer Science student based in Mumbai, India. 
+        I am deeply passionate about software development innovations, firm 
+        believer of team work and striving hard with other community members 
+        to create an impact. I often help my peers and juniors to get started with programming and introduce them to open source.
+      </p>
+    </div>
+    <div id="support" class="middle-footer">
+      <h2>Support Project</h2>
+      <p>
+        I am looking for sponsors! if someone is willing to sponsor to help me get a new hosting and database, I will be happy to have your or your company's name mentioned here on this page. You can contact me on <a style="color:#7bfff6"  href="mailto:itsvishal2417@gmail.com">itsvishal2417@gmail.com</a> for sponsorship details. If you use this web app on daily basis then do consider sponsoring this project or I might have to shut down this project within months as I am using a free tier plan for the databse which has certain limits for usage.
+      </p>
+    </div>
+    <div id="contact" class="right-footer">
+      <h2>Contact</h2>
+      <p>
+        Want to report a bug or just want have a chat? My inbox is always open, feel free to drop a text 
+        <ul>
+          <li><a style="color:#7bfff6" href="https://twitter.com/vishaltwts">Twitter</a></li>
+          <li><a style="color:#7bfff6" href="https://github.com/vishal-codes">GitHUb</a></li>
+          <li><a style="color:#7bfff6" href="https://www.linkedin.com/in/vishal-shinde-/">LinkedIn</a></li>
+          <li><a style="color:#7bfff6"  href="mailto:itsvishal2417@gmail.com">itsvishal2417@gmail.com</a></li>
+        </ul>
+        P.S. - I am mostly active on twitter.
+      </p>
+      <button onclick="topFunction()" id="topBtn" class="footerBtn">Back to Top</button>
+      <a target="_blank" rel="noopener" href="https://forms.gle/78zWtU31mBRnYeTT6"><button class="footerBtn" >Feedback!</button></a> 
+    </div>
+  </div>
+  <div class="happy-day">
+    Have a Great Day!🌻
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyC_H6uZMaLcO_awBcistxAQu7XcQ90iVaw",
+      authDomain: "bookmark-manager-2617.firebaseapp.com",
+      projectId: "bookmark-manager-2617",
+      storageBucket: "bookmark-manager-2617.appspot.com",
+      messagingSenderId: "142193613472",
+      appId: "1:142193613472:web:2b4e21abd90d0f5b0d47c5",
+      measurementId: "G-GR8NCNZW51"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const fs = firebase.firestore();
+  </script>
+  <script src="signIn.js"></script>
+</body>
+
+</html>
